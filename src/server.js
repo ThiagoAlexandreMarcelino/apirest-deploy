@@ -10,7 +10,9 @@ app.use(express.json());
 app.use(cors());
 
 //iniciando o DB
-mongose.connect('mongodb://localhost:27017/nodeapi', {useNewUrlParser:true,useUnifiedTopology:true});
+//mongose.connect('mongodb://localhost:27017/nodeapi', {useNewUrlParser:true,useUnifiedTopology:true});
+
+mongose.connect('mongodb+srv://thiagoalemarmongodb:apirest2020@cluster0.iw0hv.mongodb.net/apirest-exemplo?retryWrites=true&w=majority', {useNewUrlParser:true,useUnifiedTopology:true});
 
 //require('../src/models/Product')
 requireDir('../src/models')
